@@ -4,9 +4,9 @@ import { Card, SmallCard, Header } from './common';
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 20,
+    paddingTop: 20,
     flex: 1,
-    backgroundColor: '#80d6ff',
+    backgroundColor: '#42a5f5',
   },
   smallCardContainer: {
     flex: 0,
