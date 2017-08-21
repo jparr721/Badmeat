@@ -10,10 +10,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#42a5f5',
   },
-  row: {
-    flex: 1,
-    flexDirection: 'row',
-  },
   viewAllButton: {
     alignItems: 'center',
     margin: 20
@@ -27,8 +23,6 @@ class Pantry extends Component {
     this.state = {
       viewingAllItems: false,
     };
-
-
   }
 
   render() {
@@ -39,14 +33,19 @@ class Pantry extends Component {
 
           {/* Expiring food view (May add horizontal scrolling) */}
           <SmallHeader headerText="Expiring Soon"/>
-          <ColumnGrid items={pantryData.expiringFood} columns={4} vertical={true}/>
+          <ColumnGrid
+            items={pantryData.expiringFood}
+            columns={4}
+            vertical={true}
+          />
 
           {/* Recently added food view (May add horizontal scrolling) */}
           <SmallHeader headerText="Recently Added"/>
-          <ColumnGrid items={pantryData.newPantryItems}
-                          columns={4}
-                          vertical={true}
-                          style={{}}
+          <ColumnGrid
+            items={pantryData.newPantryItems}
+            columns={4}
+            vertical={true}
+            style={{}}
           />
 
           <View style={styles.viewAllButton}>
@@ -62,7 +61,12 @@ class Pantry extends Component {
     return (
       <View style={styles.container}>
         <Header headerText="Pantry" button1="magnify"/>
-        <ColumnGrid items={pantryData.fullPantry} columns={4} vertical={true}/>
+        <ColumnGrid
+          items={pantryData.fullPantry}
+          columns={4}
+          vertical={true}
+        />
+
         <View style={styles.viewAllButton}>
           <Button
             onPress={() => this.handleViewAll()}

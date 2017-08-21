@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, Button, ScrollView, FlatList} from 'react-native';
-import {Card, SmallCard, Header} from './';
-import {SmallHeader} from './';
+import {View, Text, StyleSheet, ScrollView } from 'react-native';
+import { SmallCard } from './';
 
 const styles = StyleSheet.create({
   row: {
@@ -16,12 +15,12 @@ class ColumnGrid extends Component {
       organizedList: [[]]
     };
     this.organizeItems();
-
   }
 
   render() {
     let rowNum = 1;
     let grid = [];
+
     for (let i = 0; i < this.props.items.length; i++) {
       grid.push(
         <View key={rowNum} style={styles.row}>{this.state.organizedList[i]}</View>
@@ -41,8 +40,7 @@ class ColumnGrid extends Component {
       <ScrollView
         contentContainerStyle={{flexDirection: 'row', flexGrow:1}}
         horizontal={true}
-        showsHorizontalScrollIndicator={false}
-        >
+        showsHorizontalScrollIndicator={false}>
         {grid}
       </ScrollView>
     );
@@ -76,6 +74,5 @@ class ColumnGrid extends Component {
   }
 
 }
-;
 
 export {ColumnGrid};
