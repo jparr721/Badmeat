@@ -7,7 +7,7 @@ const HeaderButton = (props) => {
   const { onPress, children } = props;
 
   return (
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity onPress={onPress} style={{marginRight:10}}>
       <Icon
         name={props.iconName}
         type="material-community"
