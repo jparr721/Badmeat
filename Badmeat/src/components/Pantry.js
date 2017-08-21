@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, Button, ScrollView} from 'react-native';
-import {SmallCard, Header, SmallHeader, ColumnGrid} from './common';
+import {View, StyleSheet, Button } from 'react-native';
+import { Header, SmallHeader, ColumnGrid} from './common';
 
 const pantryData = require('../../dummy_data/dummy_data_1.json');
 
