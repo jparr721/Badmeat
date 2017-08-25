@@ -4,5 +4,7 @@
     "arrow-body-style": 0,
     "indent": 0,
     "no-trailing-spaces": 0
+    "camelcase": 0,
+
     }
 }
