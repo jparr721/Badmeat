@@ -22,7 +22,7 @@ class HeaderButton extends Component {
           onRequestClose={() => {console.log("Modal has been closed")}}
         >
           <View>
-            <View style = {{ paddingTop: 10, paddingBottom: 10, backgroundColor:'#42a5f5'}}>
+            <View style = {{ alignItems: "flex-start", paddingLeft: 10,paddingTop: 10, paddingBottom: 10, backgroundColor:'#42a5f5'}}>
               <TouchableOpacity onPress={() => {
                 this.setModalVisible(!this.state.modalVisible)
               }}>
@@ -30,6 +30,7 @@ class HeaderButton extends Component {
                   name={"arrow-left"}
                   type="material-community"
                   size={28}
+                  color="#eceff1"
                 />
               </TouchableOpacity>
             </View>
